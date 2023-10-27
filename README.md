@@ -9,10 +9,11 @@ CongreSearch empowers you to flexibly and efficiently track activities in the Un
 * AUTHENTICATION: 
   * Secure log in using Google OAuth
   * Secure Create, Update, Delete operations using middleware
+  * Create & update a basic User Profile for each user, including: username & currently followed committees
 * CONGRESSIONAL COMMITTEE MEETINGS: 
-  * Select from a shortlist of congressional committees (House/Senate Appropriations, House/Senate Science, Space and Technology) to 'follow' 
+  * Select from a shortlist of congressional committees (House/Senate Appropriations) to 'follow' 
   * Update selected committees
-  * For each selected committee, see all future meetings as soon as they are scheduled (and the user logs in)
+  * For each followed committee, see all future meetings as soon as they are scheduled (and the user logs in)
   * See a user-friendly display of each meeting's details, including meeting chamber, type, title, related committees, date, and links to hearing transcripts, documents, and videos (when available) 
 * BILLS: 
   * Input a congress number (defaults to current congress, 118), bill type, and search keyword to see a list of bills from that congress, of that type, and whose titles contain the keyword
@@ -23,17 +24,17 @@ CongreSearch empowers you to flexibly and efficiently track activities in the Un
 * USER INTERFACE (UI)
   * Implement an expanding table to show meeting transcripts and bill text, instead of taking users to a separate details/show page.
 * FEATURES
-  * Implement more advanced search interface for bills, allowing 
+  * Implement more advanced search interface for bills, permitting:
     * Boolean chains of multiple keywords in the title
     * Searching for keywords in the bill text
-  * Select bills to 'follow'
+  * Select bills to 'follow' and receive notifications when the bill text becomes available.
   * Display further bill details such as sponsors, tables of actions and/or amendments
   * Include links/text of committee reports
   * User can configure email notifications when there are certain types of changes to a 'followed' item, i.e.:
     * A new committee meeting is scheduled
     * Bill text becomes available
     * Bill amendments are added
-  * Create a User Profile with a avatar picture, username, and list of previous/current 'followed' bills & committees
+  * Add an avatar picture and list of previous/current 'followed' bills to the User Profile
 
 ## ERD
 
@@ -53,4 +54,8 @@ CongreSearch empowers you to flexibly and efficiently track activities in the Un
 | GET         | /bill/:congress/:type/:billNumber              | SHOW   | { bill }                | Display bill details                                                           |
 
 ## Wireframes
-
+<br>
+<img src="public/images/Slide1.PNG" alt="Relationship Diagram (ERD)" width = 5000>
+<br>
+<br>
+<img src="public/images/Slide2.PNG" alt="Relationship Diagram (ERD)" width = 5000>
